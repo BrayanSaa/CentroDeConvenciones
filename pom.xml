@@ -102,7 +102,18 @@
       <artifactId>junit-jupiter-engine</artifactId>
       <version>${junit.version}</version>
       <scope>test</scope>
-    </dependency>  </dependencies>
+    </dependency>
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct</artifactId>
+      <version>1.5.5.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct-processor</artifactId>
+      <version>1.5.5.Final</version>
+    </dependency>
+  </dependencies>
 
   <build>
     <plugins>
@@ -124,7 +135,7 @@
             <!-- Default configuration for running with: mvn clean javafx:run -->
             <id>default-cli</id>
             <configuration>
-              <mainClass>co.edu.uniquindio.proyectofinal.centroconvenciones.centrodeconvenciones/co.edu.uniquindio.proyectofinal.centroconvenciones.centrodeconvenciones.HelloApplication</mainClass>
+              <mainClass>co.edu.uniquindio.proyectofinal.centroconvenciones.centrodeconvenciones/co.edu.uniquindio.proyectofinal.centroconvenciones.centrodeconvenciones.CentroApplication</mainClass>
               <launcher>app</launcher>
               <jlinkZipName>app</jlinkZipName>
               <jlinkImageName>app</jlinkImageName>

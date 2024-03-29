@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.proyectofinal.centroconvenciones.centrodeconvenciones.viewController.EmpleadoViewContoller">
+   <children>
+      <SplitPane layoutY="2.0" prefHeight="200.0" prefWidth="602.0">
+         <items>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="83.0" layoutY="29.0" text="ID:" />
+                  <Label layoutX="52.0" layoutY="68.0" text="Nombre:" />
+                  <Label layoutX="67.0" layoutY="109.0" text="Email:" />
+                  <Label layoutX="6.0" layoutY="148.0" prefWidth="92.0" text="Evento Asignado:" />
+                  <TextField fx:id="txtId" layoutX="145.0" layoutY="25.0" />
+                  <TextField fx:id="txtNombre" layoutX="145.0" layoutY="64.0" />
+                  <TextField fx:id="txtEmail" layoutX="145.0" layoutY="105.0" />
+                  <TextField fx:id="txtEventoAsignado" layoutX="145.0" layoutY="144.0" />
+                  <Button fx:id="btnNuevo" layoutX="440.0" layoutY="25.0" mnemonicParsing="false" onAction="#nuevoEmpleadoAction" prefHeight="25.0" prefWidth="59.0" text="Nuevo" />
+                  <Button fx:id="btnAgregar" layoutX="440.0" layoutY="64.0" mnemonicParsing="false" onAction="#agregarEmpleadoAction" text="Agregar" />
+                  <Button fx:id="btnEliminar" layoutX="440.0" layoutY="144.0" mnemonicParsing="false" onAction="#eliminarEmpleadoAction" prefHeight="25.0" prefWidth="59.0" text="Eliminar" />
+                  <Separator layoutY="198.0" prefHeight="2.0" prefWidth="600.0" />
+                  <Button fx:id="btnActualizar" layoutX="440.0" layoutY="105.0" mnemonicParsing="false" onAction="#actualizarEmpleadoAction" text="Actualizar" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <AnchorPane layoutY="200.0" prefHeight="200.0" prefWidth="602.0">
+         <children>
+            <TableView fx:id="tableEmpleados" layoutX="1.0" layoutY="6.0" prefHeight="194.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="tcId" prefWidth="65.0" text="ID" />
+                <TableColumn fx:id="tcNombre" prefWidth="150.0" text="Nombre" />
+                  <TableColumn fx:id="tcEmail" prefWidth="152.0" text="Email" />
+                  <TableColumn fx:id="tcEventoAsignado" prefWidth="231.0" text="Evento Asignado" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
