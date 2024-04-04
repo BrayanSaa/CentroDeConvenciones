@@ -23,7 +23,7 @@
             <TextField fx:id="txtNombre" layoutX="145.0" layoutY="64.0" />
             <TextField fx:id="txtEmail" layoutX="145.0" layoutY="105.0" />
             <TextField fx:id="txtEventoAsignado" layoutX="145.0" layoutY="144.0" />
-            <Button fx:id="btnNuevo" layoutX="440.0" layoutY="25.0" mnemonicParsing="false" onAction="#nuevoEmpleadoAction" prefHeight="25.0" prefWidth="59.0" text="Nuevo" />
+            <Button fx:id="btnNuevo" layoutX="440.0" layoutY="25.0" mnemonicParsing="false" onAction="#buscarEmpleadoAction" prefHeight="25.0" prefWidth="59.0" text="Buscar" />
             <Button fx:id="btnAgregar" layoutX="440.0" layoutY="64.0" mnemonicParsing="false" onAction="#agregarEmpleadoAction" text="Agregar" />
             <Button fx:id="btnEliminar" layoutX="440.0" layoutY="144.0" mnemonicParsing="false" onAction="#eliminarEmpleadoAction" prefHeight="25.0" prefWidth="59.0" text="Eliminar" />
             <Separator layoutY="198.0" prefHeight="2.0" prefWidth="600.0" />
