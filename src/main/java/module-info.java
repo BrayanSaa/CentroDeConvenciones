@@ -6,4 +6,6 @@ module co.edu.uniquindio.proyectofinal.centroconvenciones.centrodeconvenciones {
 
     opens co.edu.uniquindio.proyectofinal.centroconvenciones.centrodeconvenciones to javafx.fxml;
     exports co.edu.uniquindio.proyectofinal.centroconvenciones.centrodeconvenciones;
+    exports co.edu.uniquindio.proyectofinal.centroconvenciones.centrodeconvenciones.controllers;
+    opens co.edu.uniquindio.proyectofinal.centroconvenciones.centrodeconvenciones.controllers to javafx.fxml;
 }

@@ -9,7 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"  fx:controller="co.edu.uniquindio.proyectofinal.centroconvenciones.centrodeconvenciones.EmpleadoController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"  fx:controller="co.edu.uniquindio.proyectofinal.centroconvenciones.centrodeconvenciones.controllers.EmpleadoController">
   <children>
     <SplitPane layoutY="2.0" prefHeight="200.0" prefWidth="602.0">
       <items>

@@ -1,4 +1,4 @@
-package co.edu.uniquindio.proyectofinal.centroconvenciones.centrodeconvenciones;
+package co.edu.uniquindio.proyectofinal.centroconvenciones.centrodeconvenciones.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
