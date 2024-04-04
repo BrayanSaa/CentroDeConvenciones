@@ -29,9 +29,9 @@ public class Administrador {
                 .findFirst();
     }
 
-    public List<Empleado> buscar(String id,String nombre,String correo,String evento){
+    public List<Empleado> buscar(String id,String nombre,String correo){
         return empleados.stream()
-                .filter(EmpleadoBusquedaUtil.busarPorTodo(id,nombre,correo,evento))
+                .filter(EmpleadoBusquedaUtil.buscarPorTodo(id,nombre,correo))
                 .collect(Collectors.toUnmodifiableList());
     }
 

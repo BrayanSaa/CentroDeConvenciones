@@ -26,7 +26,7 @@ public class EmpleadoController {
     @FXML
     private TextField txtNombre;
     @FXML
-    private TextField  txtEmail;
+    private TextField txtEmail;
     @FXML
     private TextField txtEventoAsignado;
 
@@ -35,13 +35,15 @@ public class EmpleadoController {
 
     @FXML
     public void initialize(){
-        llenarTabla(INSTANCE.getAdministrador().buscarEmpleado());
+        llenarTabla(INSTANCE.getAdministrador().buscar(null,null,null));
         tcId.setCellValueFactory(new PropertyValueFactory<>("id"));
         tcNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         tcEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
         tcEventoAsignado.setCellValueFactory(new PropertyValueFactory<>("evento"));
         tableEmpleados.getSelectionModel().selectedItemProperty()
                 .addListener((observable,oldValue,newValue)->llenarCampo(newValue));
+
+        empleadoSeleccionado=null;
     }
 
     private void llenarCampo(Empleado empleado){
@@ -59,17 +61,19 @@ public class EmpleadoController {
         tableEmpleados.setItems(FXCollections.observableArrayList(empleados));
         tableEmpleados.refresh();
     }
-    public void buscarEmpleadoAction(ActionEvent actionEvent) {
+    public void buscarEmpleadoAction() {
+        llenarTabla(
+                INSTANCE.getAdministrador().buscar(txtId.getText(),txtNombre.getText(),txtEmail.getText())
+                );
     }
 
     public void agregarEmpleadoAction() {
         try {
-            Empleado empleado = Empleado.of(txtId.getText(),txtId.getText(),txtEmail.getText());
+            Empleado empleado = Empleado.of(txtId.getText(),txtNombre.getText(),txtEmail.getText());
             INSTANCE.getAdministrador().registrarEmpleado(empleado);
-            llenarTabla(INSTANCE.getAdministrador().buscar);
+            llenarTabla(INSTANCE.getAdministrador().buscar(null,null,null));
         } catch (Exception e) {
             mostrarMensaje(e.getMessage());
-
         }
     }
 
@@ -79,10 +83,9 @@ public class EmpleadoController {
         alert.setContentText(message);
         alert.showAndWait();
     }
-
     public void eliminarEmpleadoAction(ActionEvent actionEvent) {
-    }
 
+    }
     public void actualizarEmpleadoAction(ActionEvent actionEvent) {
     }
 }

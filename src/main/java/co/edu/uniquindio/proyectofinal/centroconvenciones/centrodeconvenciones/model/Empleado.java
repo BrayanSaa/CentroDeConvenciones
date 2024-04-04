@@ -7,21 +7,21 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class Empleado {
-    private final String ID;
+    private final String id;
     private final String nombre;
     private final String correo;
     private final List<String> eventos;
 
-    public Empleado(String ID, String nombre,String correo) {
-        this.ID = ID;
+    public Empleado(String id, String nombre,String correo) {
+        this.id = id;
         this.nombre = nombre;
         this.correo = correo;
         eventos = new ArrayList<>();
     }
 
-    public static Empleado of(String ID, String nombre,String correo)
+    public static Empleado of(String id, String nombre,String correo)
             throws ValorRequeridoException {
-        if (Objects.requireNonNull(ID, "El ID es requerido").isEmpty()) {
+        if (Objects.requireNonNull(id, "El ID es requerido").isEmpty()) {
             throw new ValorRequeridoException("numero ID");
         }
         if (Objects.requireNonNull(nombre, "El Nombre es requerido").isEmpty()) {
@@ -29,7 +29,7 @@ public class Empleado {
         }
         Objects.requireNonNull(correo,"El genero es requerido");
 
-        return new Empleado(ID,nombre,correo);
+        return new Empleado(id,nombre,correo);
     }
 
 
@@ -39,7 +39,7 @@ public class Empleado {
     }
 
     public String getID() {
-        return ID;
+        return id;
     }
 
     public String getNombre() {
